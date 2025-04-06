@@ -1,0 +1,280 @@
+html, body{
+  height: 100vh;
+  overflow: auto;
+}
+*{
+    margin:0;
+    padding:0;
+  
+  
+  }
+  body{
+    
+    background-color: black;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+  a{
+    text-decoration: none;
+    color: aliceblue;
+    font-size: 30px;
+    margin: 0 1.5rem;
+    padding:0.5rem;
+    position: relative;
+    transition:all 0.3sec ;
+  
+    
+  
+  }
+  a:hover{
+  color: gold;
+    
+  }
+  header{
+    
+    padding:1.5cm;
+    text-align: center;
+    box-shadow:o 4px 6px rgb(197, 81, 149);
+    border-radius:2px;
+    
+  }
+  footer{
+    position: absolute;
+    bottom: -100px;
+    left: 0;
+    width: 100%;
+    background: linear-gradient(to top, #000, #222);
+    border: white;
+    text-align: center;
+    text-transform: uppercase;
+    padding-top: 10px 0;
+    transition: bottom 0.3s ease-in-out ;
+    
+
+     }
+
+     footer li{
+      list-style: none;
+      display: inline-block;
+      margin: 2px;
+  }
+  .footer-icons a{
+     color: white;
+     padding: 15px;
+     border-radius: 100px;
+     display: flex;
+     font-size: 25px;
+     align-items: center;
+     gap: 20px;
+  }
+  .footer-icons a:hover{
+    color: bisque;
+  }
+  .footer-info {
+    color: white;
+  }
+  .footer-copyright{
+    background-color: black;
+    color: aliceblue;
+    padding: 15px;
+    margin-top: 15px;
+
+  }
+
+  .store-downloads{
+    padding: 0;
+    margin: 0;
+  }
+  .icon{
+    width: 200px;
+    height: auto;
+  
+    display: inline-block;
+
+  }
+  .store-downloads{
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    gap: 0;
+    
+  
+  }
+  .store-downloads a{
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+  }
+  .store-downloads a img {
+    display: block;
+    width: 150px;
+    height: auto;
+
+  }
+  .store-downloads a:first-child{
+    margin-left: 0;
+  }
+  .store-downloads a:last-child{
+  margin-left: -2px;
+  }
+   nav a::after{
+    content:"";
+    position: absolute;
+    width: 0;
+    height: 2px;
+    left:0;
+    background-color: white;
+  }
+#about {
+    
+    border-image: 0ex;
+    text-align: justify;
+    text-size-adjust: 5v00px;
+    color: yellow;
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    
+  }
+  .top{
+    background-color: rgba(0, 0, 0, 0.5);
+    padding-top: 5px;
+    margin-top: -55px;
+    
+    }
+    .dropdown {
+      position: relative;
+      display: inline-block;
+      color: white;
+      
+      
+  }
+  .dropbtn {
+      color: white;
+      padding: 10px 15px;
+      text-decoration: none;
+      border: none;
+      cursor: pointer;
+      font-size: 27px;
+      display: inline-block;
+      
+      
+      
+    
+  }
+  .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: #444;
+      min-width: 180px;
+      box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+      z-index: 999;
+  }
+  .dropdown-content a {
+      color: white;
+      padding: 3px;
+      display: block;
+      transition: background 0.3s ease;
+  }
+  .dropdown-content a:hover {
+      background-color: #555;
+  }
+  .dropdown:hover .dropdown-content {
+      display: block;
+  }
+  .about-container h1 {
+     color: yellow;
+     text-align: center;
+     font-style: inherit;
+  }
+.about-container p {
+  font-style: oblique;
+  color: white;
+}
+#mode{
+  text-align: center;
+  width: 100%;
+  background-color: #222;
+  
+}
+.cods{
+  width: 50%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+
+.modes{
+  position: relative;
+  display: inline-block;
+  text-align: center;
+}
+.modes img{
+  width: 75%;
+  height: auto;
+  display: block;
+  
+}
+.image-text{
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: white;
+  background: #444;
+  padding: 4px 10px;
+  border-radius: 5px;
+  font-weight: bolds;
+}
+.hamburger {
+  display: none;
+  font-size: 30px;
+  cursor: pointer;
+  color: white;
+  padding: 12px;
+  position: absolute;
+  top: 10px;
+  left: 0;
+  z-index: 1000;
+}
+
+/* Responsive layout */
+@media screen and (max-width: 768px) {
+  nav {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    background-color: #222;
+    padding: 10px;
+  }
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    background-color: #222;
+    padding: 10px;
+    width: 100%;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+  .dropdown{
+    width: 100%;
+    margin-top: 10px;
+  }
+
+  .hamburger {
+    display: block;
+  }
+
+  dropdown-content a {
+    padding: 12px;
+    display: block;
+    text-decoration: none;
+    color: white;
+    background-color: #444;
+  }
+  
+}
